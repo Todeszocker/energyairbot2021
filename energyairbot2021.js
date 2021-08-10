@@ -16,7 +16,7 @@ const questions = {
 	"IN WELCHER LOCATION FINDET DAS ENERGY AIR 2021 UNTER FREIEM HIMMEL STATT?":"Stade de Suisse Wankdorf",
 	"WIE HEISST DIE AKTUELLE KAMPAGNE GEGEN HASS IM INTERNET, WELCHE SWISSCOM MIT ENERGY LANCIERT HAT?":"Mute the hate",
 	"WER WAR DER ALLERERSTE ACT IN DER GESCHICHTE DES ENERGY AIR?":"Bastian Baker",
-	"WER WAR DER ÜBERRASCHUNGSACT AM ENERGY AIR 2018?":"Bastian Baker",
+	"WER WAR DER ÜBERRASCHUNGSACT AM ENERGY AIR 2018?":"Lo &amp; Leduc",
 	"IN WELCHEM SCHWEIZER KANTON WURDE TALLY WEIJL 1984 GEGRÜNDET?":"Basel",
 	"MIT WELCHER ZUSATZOPTION HAST DU DIE MÖGLICHKEIT, DIREKT VOR DER BÜHNE ZU STEHEN?":"XTRA Circle",
 	"WIE LANGE DAUERTE DAS ENERGY AIR 2019?":"6 Stunden",
@@ -102,6 +102,7 @@ function makeAction () {
     else if ($('button:contains("Game starten")').length) {
 			$('button:contains("Game starten")').trigger('click')
 			setTimeout(nextQuestion, 200)
+    }
 	else {
 		answerQuestion()
 	}
