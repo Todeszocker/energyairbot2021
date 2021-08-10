@@ -9,7 +9,7 @@ Erstelle ein neues Userscript und lösche den darin enthaltenen Code. Kopiere de
 
 Öffne die Seite https://game.energy.ch und thats it :)
 
-Vielen Dank an @ggmanugg für den Code. Dieser Code wurde von mir an das Game von 2021 angepasst.
+Vielen Dank an [@ggmanugg] für den Code. Dieser Code wurde von mir an das Game von 2021 angepasst.
 
 English:
 
@@ -19,4 +19,6 @@ Create a new userscript and delete the existing code. Copy the script and paste 
 
 Open the following webpage https://game.energy.ch and that's it :)
 
-Special thanks to @ggmanugg for the code. This code was adapted by me to the game of 2021.
+Special thanks to [@ggmanugg] for the code. This code was adapted by me to the game of 2021.
+
+[@ggmanugg]: https://github.com/ggmanugg/energyair_bot
