@@ -93,6 +93,7 @@ function makeAction () {
                     setTimeout(makeAction, timer)
                 }
             else {
+		setTimeout(makeAction, timer)
                 document.getElementById('lose').click()
                 setTimeout(makeAction, timer)
             }
