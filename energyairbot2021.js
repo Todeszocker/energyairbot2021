@@ -48,6 +48,7 @@ const questions = {
     	"WELCHER ACT WAR NOCH NIE AN EINEM ENERGY AIR DABEI?":"Cro",
     	"WIE WIRD TALLY WEIJL AUSGESPROCHEN?":"Talli Weil",
     	"IN WELCHER BELIEBTEN SERIE WAR TALLY WEIJL ZU SEHEN?":"Gossip Girl",
+	"IN WELCHEM SCHWEIZER KANTON ERÖFFNETE TALLY WEIJL 1987 DEN ERSTEN STORE?":"Fribourg",
     	"Du hast die erste Hürde geschafft.":"Jetzt Tickets für das Energy Air gewinnen!"
 }
 
