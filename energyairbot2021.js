@@ -61,13 +61,13 @@ function currentQuestion () {
 }
 
 function nextQuestion () {
-    const timer = Math.floor(Math.random() * 2000) + 200
+    const timer = Math.floor(Math.random() * 2000) + 500
     $('button#next-question').trigger('click')
     setTimeout(makeAction, timer)
 }
 
 function answerQuestion () {
-    const timer = Math.floor(Math.random() * 2000) + 200
+    const timer = Math.floor(Math.random() * 2000) + 500
     let curr = currentQuestion()
     console.log(curr, questions[curr])
     $('#answers .answer-wrapper').each((i, el) => {
