@@ -1,4 +1,4 @@
-// ==/UserScript==
+// ==UserScript==
 // @name         Energy Air 2021 Game Bot
 // @version      1
 // @description  Win tickets for the Energy Air 2021 automatically
