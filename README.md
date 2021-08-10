@@ -11,8 +11,8 @@ Erstelle ein neues Userscript und lösche den darin enthaltenen Code. Kopiere de
 
 Vielen Dank an [@ggmanugg] für den Code. Dieser Code wurde von mir an das Game von 2021 angepasst.
 
-English:
 
+**English:**
 Download and use the Tampermonkey Addon for your browser: https://www.tampermonkey.net
 
 Create a new userscript and delete the existing code. Copy the script and paste it into the empty userscript. Save it with Ctrl + S.
