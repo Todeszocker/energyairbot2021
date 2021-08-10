@@ -61,14 +61,13 @@ function currentQuestion () {
 }
 
 function nextQuestion () {
-    const timer = Math.floor(Math.random() * 2000) + 500
-    setTimeout(makeAction, timer)
+    window.clearTimeout(setTimeout);
+    setTimeout(makeAction, Math.floor((Math.random()+1)* (3000 - 600) + 600))
     $('button#next-question').trigger('click')
-    setTimeout(makeAction, timer)
-}
+    }
 
 function answerQuestion () {
-    const timer = Math.floor(Math.random() * 2000) + 500
+    window.clearTimeout(setTimeout);
     let curr = currentQuestion()
     console.log(curr, questions[curr])
     $('#answers .answer-wrapper').each((i, el) => {
@@ -76,38 +75,38 @@ function answerQuestion () {
             $(el).children('input').trigger('click')
         }
     })
-    setTimeout(nextQuestion, timer) //speed
+    setTimeout(nextQuestion, Math.floor((Math.random()+1)* (3000 - 600) + 600))
 }
 
 function makeAction () {
-    const timer = Math.floor(Math.random() * 2000) + 500
+    window.clearTimeout(setTimeout);
 	if (document.getElementsByTagName('h1')[1] != null){
 		if (titleIs('Hinter welchem Logo verstecken sich die Tickets?')) {
 			console.log('STEP: Memory')
 			var star = Math.floor(Math.random() * 12) + 2;
 			document.getElementsByTagName('img') [star].click();
-			setTimeout(makeAction, timer)
+			setTimeout(makeAction, Math.floor((Math.random()+1)* (3000 - 600) + 600))
 		} else if ($('h1:contains("verloren")')) {
             	if ($('p:contains("Starte das Spiel neu.")').length) {
+                    setTimeout(makeAction, Math.floor((Math.random()+1)* (3000 - 600) + 600))
                     $('button:contains("Erneut")').trigger('click')
                     console.clear()
-                    setTimeout(makeAction, timer)
                 }
             else {
-		setTimeout(makeAction, timer)
+                setTimeout(makeAction, Math.floor((Math.random()+1)* (3000 - 600) + 600))
                 document.getElementById('lose').click()
-                setTimeout(makeAction, timer)
+                console.clear()
             }
 		}
 	}
     else if ($('button:contains("Jetzt Tickets für das Energy Air gewinnen!")').length) {
-	    		setTimeout(makeAction, timer)
 			$('button:contains("Jetzt Tickets für das Energy Air gewinnen!")').trigger('click')
-			setTimeout(makeAction, timer)
+			setTimeout(makeAction, Math.floor(Math.random() * (3000 - 600) + 600))
 	}
     else if ($('button:contains("Game starten")').length) {
 			$('button:contains("Game starten")').trigger('click')
-			setTimeout(nextQuestion, timer)}
+			setTimeout(makeAction, Math.floor((Math.random()+1)* (3000 - 600) + 600))
+    }
 	else {
 		answerQuestion()
 	}
