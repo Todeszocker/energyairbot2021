@@ -79,7 +79,7 @@ function answerQuestion () {
 }
 
 function makeAction () {
-    const timer = Math.floor(Math.random() * 2000) + 200
+    const timer = Math.floor(Math.random() * 2000) + 500
 	if (document.getElementsByTagName('h1')[1] != null){
 		if (titleIs('Hinter welchem Logo verstecken sich die Tickets?')) {
 			console.log('STEP: Memory')
