@@ -12,7 +12,7 @@ Vielen Dank an [@ggmanugg] für den Code. Dieser Code wurde von mir an das Game 
 
 **English:**
 
-1. Download and use the Tampermonkey Addon for your browser: https://www.tampermonkey.net
+1. Download the Tampermonkey Addon for your browser: https://www.tampermonkey.net
 2. Create a new userscript and delete the existing code. Copy the script and paste it into the empty userscript. Save it with Ctrl + S.
 3. Open the following webpage https://game.energy.ch and that's it :)
 
