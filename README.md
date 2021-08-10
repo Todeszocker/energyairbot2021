@@ -1,6 +1,9 @@
 # Energy Air 2021 Game Bot
 
 
+**THE CODE WILL BE PUBLISHED SOON. SOME CHANGES ARE BEING MADE.**
+**DER CODE WIRD BALD VERÖFFENTLICHT. EINIGE ÄNDERUNGEN SIND IM GANGE.**
+
 For the English description please read below!
 
 1. Lade den Tampermonkey Addon für deinen Browser runter: https://www.tampermonkey.net
