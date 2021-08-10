@@ -2,7 +2,7 @@
 // @name         Energy Air 2021 Game Bot
 // @version      1
 // @description  Win tickets for the Energy Air 2021 automatically
-// @author       alextr2600
+// @author       Alex Truong
 // @match        *game.energy.ch/*
 // @run-at       document-end
 // @grant        none
@@ -61,11 +61,13 @@ function currentQuestion () {
 }
 
 function nextQuestion () {
+    const timer = Math.floor(Math.random() * 2000) + 200
     $('button#next-question').trigger('click')
-    setTimeout(makeAction, 200)
+    setTimeout(makeAction, timer)
 }
 
 function answerQuestion () {
+    const timer = Math.floor(Math.random() * 2000) + 200
     let curr = currentQuestion()
     console.log(curr, questions[curr])
     $('#answers .answer-wrapper').each((i, el) => {
@@ -73,36 +75,36 @@ function answerQuestion () {
             $(el).children('input').trigger('click')
         }
     })
-    setTimeout(nextQuestion, 200) //speed
+    setTimeout(nextQuestion, timer) //speed
 }
 
 function makeAction () {
+    const timer = Math.floor(Math.random() * 2000) + 200
 	if (document.getElementsByTagName('h1')[1] != null){
 		if (titleIs('Hinter welchem Logo verstecken sich die Tickets?')) {
 			console.log('STEP: Memory')
 			var star = Math.floor(Math.random() * 12) + 2;
 			document.getElementsByTagName('img') [star].click();
-			setTimeout(makeAction, 1000)
+			setTimeout(makeAction, timer)
 		} else if ($('h1:contains("verloren")')) {
             	if ($('p:contains("Starte das Spiel neu.")').length) {
                     $('button:contains("Erneut")').trigger('click')
                     console.clear()
-                    setTimeout(makeAction, 200)
+                    setTimeout(makeAction, timer)
                 }
             else {
                 document.getElementById('lose').click()
-                setTimeout(makeAction, 200)
+                setTimeout(makeAction, timer)
             }
 		}
 	}
     else if ($('button:contains("Jetzt Tickets für das Energy Air gewinnen!")').length) {
 			$('button:contains("Jetzt Tickets für das Energy Air gewinnen!")').trigger('click')
-			setTimeout(makeAction, 200)
+			setTimeout(makeAction, timer)
 	}
     else if ($('button:contains("Game starten")').length) {
 			$('button:contains("Game starten")').trigger('click')
-			setTimeout(nextQuestion, 200)
-    }
+			setTimeout(nextQuestion, timer)}
 	else {
 		answerQuestion()
 	}
