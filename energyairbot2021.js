@@ -99,6 +99,7 @@ function makeAction () {
 		}
 	}
     else if ($('button:contains("Jetzt Tickets für das Energy Air gewinnen!")').length) {
+	    		setTimeout(makeAction, timer)
 			$('button:contains("Jetzt Tickets für das Energy Air gewinnen!")').trigger('click')
 			setTimeout(makeAction, timer)
 	}
