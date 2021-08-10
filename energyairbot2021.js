@@ -2,7 +2,7 @@
 // @name         Energy Air 2021 Game Bot
 // @version      1
 // @description  Win tickets for the Energy Air 2021 automatically
-// @author       Alextr2600
+// @author       ggmanugg, RoadJDK
 // @match        *game.energy.ch/*
 // @run-at       document-end
 // @grant        none
@@ -18,6 +18,7 @@ const questions = {
 	"WER WAR DER ALLERERSTE ACT IN DER GESCHICHTE DES ENERGY AIR?":"Bastian Baker",
 	"WER WAR DER ÜBERRASCHUNGSACT AM ENERGY AIR 2018?":"Lo &amp; Leduc",
 	"IN WELCHEM SCHWEIZER KANTON WURDE TALLY WEIJL 1984 GEGRÜNDET?":"Basel",
+	"IN WELCHEM SCHWEIZER KANTON ERÖFFNETE TALLY WEIJL 1987 DEN ERSTEN STORE?":"Fribourg",
 	"MIT WELCHER ZUSATZOPTION HAST DU DIE MÖGLICHKEIT, DIREKT VOR DER BÜHNE ZU STEHEN?":"XTRA Circle",
 	"WIE LANGE DAUERTE DAS ENERGY AIR 2019?":"6 Stunden",
 	"MUSIKGRÖSSEN AUS WIE VIELEN LÄNDERN WAREN AM ENERGY AIR 2019 DABEI?":"Aus 7 Ländern",
@@ -40,14 +41,14 @@ const questions = {
 	"WIE ALT MUSS MAN SEIN, UM OHNE ERWACHSENE BEGLEITUNG AM ENERGY AIR TEILZUNEHMEN?":"14 Jahre",
 	"WELCHE STADT GEHÖRT SEIT AUGUST AUCH ZUR ENERGY FAMILIE UND WIRD AM ENERGY AIR VERTRETEN SEIN?":"Luzern",
 	"MIT WELCHEM AUFBLASBAREN TIER KONNTEN ZWEI AUSERWÄHLTE AM LETZTEN ENERGY AIR ÜBER DIE GANZE MEUTE CROWDSURFEN?":"Schwan",
-    "WOMIT ERSCHIENEN DIE ENERGY MEIN MORGEN MODERATOREN MOSER UND SCHELKER AUF DER ENERGY AIR BÜHNE 2019?":"Mit Spielzeug-Pferden",
-    "WELCHES SCHWEIZER DJ-DUO SORGTE AM ENERGY AIR 2019 ZU BEGINN FÜR REICHLICH STIMMUNG?":"Averdeck",
-    "WIE HEISST DIE TRAM- UND BUSHALTESTELLE, WELCHE SICH DIREKT NEBEN DEM STADION WANKDORF BEFINDET?":"Wankdorf Center",
-    "WELCHEN KLEIDUNGSSTIL VERFOLGT TALLY WEIJL GRUNDSÄTZLICH?":"Just in time (voll im Trend)",
-    "WELCHER ACT WAR NOCH NIE AN EINEM ENERGY AIR DABEI?":"Cro",
-    "WIE WIRD TALLY WEIJL AUSGESPROCHEN?":"Talli Weil",
-    "IN WELCHER BELIEBTEN SERIE WAR TALLY WEIJL ZU SEHEN?":"Gossip Girl",
-    "Du hast die erste Hürde geschafft.":"Jetzt Tickets für das Energy Air gewinnen!"
+    	"WOMIT ERSCHIENEN DIE ENERGY MEIN MORGEN MODERATOREN MOSER UND SCHELKER AUF DER ENERGY AIR BÜHNE 2019?":"Mit Spielzeug-Pferden",
+   	"WELCHES SCHWEIZER DJ-DUO SORGTE AM ENERGY AIR 2019 ZU BEGINN FÜR REICHLICH STIMMUNG?":"Averdeck",
+    	"WIE HEISST DIE TRAM- UND BUSHALTESTELLE, WELCHE SICH DIREKT NEBEN DEM STADION WANKDORF BEFINDET?":"Wankdorf Center",
+    	"WELCHEN KLEIDUNGSSTIL VERFOLGT TALLY WEIJL GRUNDSÄTZLICH?":"Just in time (voll im Trend)",
+    	"WELCHER ACT WAR NOCH NIE AN EINEM ENERGY AIR DABEI?":"Cro",
+    	"WIE WIRD TALLY WEIJL AUSGESPROCHEN?":"Talli Weil",
+    	"IN WELCHER BELIEBTEN SERIE WAR TALLY WEIJL ZU SEHEN?":"Gossip Girl",
+    	"Du hast die erste Hürde geschafft.":"Jetzt Tickets für das Energy Air gewinnen!"
 }
 
 function titleIs (title, selector = 'h1') {
@@ -62,7 +63,7 @@ function currentQuestion () {
 
 function nextQuestion () {
     window.clearTimeout(setTimeout);
-    setTimeout(makeAction, Math.floor((Math.random()+1)* (3000 - 600) + 600))
+    setTimeout(makeAction, Math.floor(Math.random() * (700 - 300) + 300))
     $('button#next-question').trigger('click')
     }
 
@@ -75,7 +76,7 @@ function answerQuestion () {
             $(el).children('input').trigger('click')
         }
     })
-    setTimeout(nextQuestion, Math.floor((Math.random()+1)* (3000 - 600) + 600))
+    setTimeout(nextQuestion, Math.floor(Math.random() * (300 - 100) + 100))
 }
 
 function makeAction () {
@@ -85,15 +86,15 @@ function makeAction () {
 			console.log('STEP: Memory')
 			var star = Math.floor(Math.random() * 12) + 2;
 			document.getElementsByTagName('img') [star].click();
-			setTimeout(makeAction, Math.floor((Math.random()+1)* (4000 - 1000) + 1000))
+			setTimeout(makeAction, Math.floor(Math.random() * (700 - 500) + 500))
 		} else if ($('h1:contains("verloren")')) {
             	if ($('p:contains("Starte das Spiel neu.")').length) {
-                    setTimeout(makeAction, Math.floor((Math.random()+1)* (3000 - 600) + 600))
+                    setTimeout(makeAction, Math.floor(Math.random() * (1000 - 600) + 600))
                     $('button:contains("Erneut")').trigger('click')
                     console.clear()
                 }
             else {
-                setTimeout(makeAction, Math.floor((Math.random()+1)* (3000 - 600) + 600))
+                setTimeout(makeAction, Math.floor(Math.random() * (1500 - 600) + 600))
                 document.getElementById('lose').click()
                 console.clear()
             }
@@ -101,11 +102,11 @@ function makeAction () {
 	}
     else if ($('button:contains("Jetzt Tickets für das Energy Air gewinnen!")').length) {
 			$('button:contains("Jetzt Tickets für das Energy Air gewinnen!")').trigger('click')
-			setTimeout(makeAction, Math.floor((Math.random()+1) * (3000 - 600) + 600))
+			setTimeout(makeAction, Math.floor(Math.random() * (2000 - 600) + 600))
 	}
     else if ($('button:contains("Game starten")').length) {
 			$('button:contains("Game starten")').trigger('click')
-			setTimeout(makeAction, Math.floor((Math.random()+1)* (3000 - 600) + 600))
+			setTimeout(makeAction, Math.floor(Math.random() * (3000 - 600) + 600))
     }
 	else {
 		answerQuestion()
