@@ -62,6 +62,7 @@ function currentQuestion () {
 
 function nextQuestion () {
     const timer = Math.floor(Math.random() * 2000) + 500
+    setTimeout(makeAction, timer)
     $('button#next-question').trigger('click')
     setTimeout(makeAction, timer)
 }
