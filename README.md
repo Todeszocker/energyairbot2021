@@ -16,6 +16,6 @@ Vielen Dank an [@ggmanugg] für den Code. Dieser Code wurde von mir an das Game 
 2. Create a new userscript and delete the existing code. Copy the script and paste it into the empty userscript. Save it with Ctrl + S.
 3. Open the following webpage https://game.energy.ch and that's it :)
 
-Special thanks to [@ggmanugg] for the code. This code was adapted by me to the game of 2021.
+Special thanks to [@ggmanugg] for the code. This code was adapted by me to the 2021 game.
 
 [@ggmanugg]: https://github.com/ggmanugg/energyair_bot
